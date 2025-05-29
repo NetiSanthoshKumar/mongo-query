@@ -3,8 +3,8 @@ db.employees.updateOne(
   { name: "John Smith" },
   { $set: { email: "john@outlook.com" } }
 );
- // 2
- db.employees.find().sort({ salary: -1 }).limit(3);
+// 2
+db.employees.find().sort({ salary: -1 }).limit(3);
 // 3
 db.employees.updateMany({}, { $inc: { salary: 1000 } });
 // 4
