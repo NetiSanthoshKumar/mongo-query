@@ -28,3 +28,18 @@ db.employees.aggregate([
     }
 ])
 // 3 rd query
+db.employees.aggregate([
+  {
+    $project: {
+      name: 1,
+      age: 1,
+      grade: {
+        $cond: {
+          if: { $gt: ["$age", 40] },
+          then: "B and A",
+          else: "B and B"
+        }
+      }
+    }
+  }
+])
