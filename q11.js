@@ -37,7 +37,7 @@ db.employees.aggregate([
         $cond: {
           if: { $gt: ["$age", 40] },
           then: "Band A",
-          else: "Band B"
+          else: "Band B",
         }
       }
     }
